@@ -80,7 +80,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 
 ## Vocareum
 
-1. Click on the *Vocareum* link in the left menu of Canvas. Or, alternatively, login to Vocareum at [www.vocareum.com](http://www.vocareum.com).
+1. Login to Vocareum at [labs.vocareum.com](https://labs.vocareum.com).
 1. Click on *Help* in the top menu and read the "Getting Started - Students" information.
 1. Back in the main Vocareum interface, click on *My Work* for Lab 1.
 1. Click on *Upload* in the left pane of the Lab 1 workbench and follow the instructions to upload the `WarEagle.java` file.
