@@ -41,7 +41,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 
 ## jGRASP
 
-1. If you are working on your own computer, download and install the latest version of jGRASP from [jgrasp.org](jgrasp.org). jGRASP is updated frequently so you will want to keep your installed version updated.
+1. If you are working on your own computer, download and install the latest version of jGRASP from [jgrasp.org](http://jgrasp.org). jGRASP is updated frequently so you will want to keep your installed version updated.
 1. Launch jGRASP.
 1. Use the *Settings* menu to configure the following features, and others if desired.
 	- *Auto Save*: If this option is checked, modified files are saved before a compile operation.
