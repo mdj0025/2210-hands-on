@@ -34,7 +34,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 	- `tools`
 4. Repeat the steps above on your own machine if you will be using it for completing work in this course.
 	- I would also recommend using a free backup and synchronization service like Dropbox (`dropbox.com`). You **never** want to be in the situation of losing all the work you've put in on an assignment.
-	- If you want to get a head start on using a professional tool for backup, synchronization, and more, then you could explore the use of `git` (see `https://git-scm.com/`). This carries a steep learning curve and isn't necessary for 2210 so ... *cavete discipulus*.
+	- If you want to get a head start on using a professional tool for backup, synchronization, and more, then you could explore the use of `git` (see `https://git-scm.com/`). This carries a steep learning curve and isn't necessary for 2210 so ... *caveat discipulus*.
 		- If you use `git` you may also want to use a web-based code hosting service like GitHub. I support the use of hosting services, but all assignment-related code must be kept strictly in **private** repositories during the semester. Although GitHub offers free private repos, there are hoops to jump through. I would recommend either GitLab or Bitbucket for relatively painless and free private repos.
 5. If you will be using your own computer or other off-campus computers to complete course work, refer to the following link to see how to keep your local files in sync with the Engineering drive.
 	- [`http://eng.auburn.edu/admin/ens/helpdesk/off-campus/index.html`](http://eng.auburn.edu/admin/ens/helpdesk/off-campus/index.html)
