@@ -86,6 +86,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. Read the following help page for an overview of logging in to and using Vocareum: [http://help.vocareum.com/article/30-getting-started-students](http://help.vocareum.com/article/30-getting-started-students).
 1. Login to Vocareum at [labs.vocareum.com](https://labs.vocareum.com). You should see a page similar to the following:
 	![Vocareum screenshot](images/voc.png)
+1. **You must enter a valid access code before the grace period ends.** Access cards can be purchsed in the AU Bookstore for $20.
 1. Click on *Hands-On: Getting Started* in the left menu.
 1. Click on *My Work*.
 1. Click on *Upload* in the left pane of the workbench and follow the instructions to upload the `WarEagle.java` file.
