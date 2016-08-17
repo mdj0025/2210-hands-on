@@ -83,7 +83,8 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 ## Vocareum
 
 1. Read the following help page for an overview of logging in to and using Vocareum: [http://help.vocareum.com/article/30-getting-started-students](http://help.vocareum.com/article/30-getting-started-students).
-1. Login to Vocareum at [labs.vocareum.com](https://labs.vocareum.com).
+1. Login to Vocareum at [labs.vocareum.com](https://labs.vocareum.com). You should see a page similar to the following:
+	![Vocareum screenshot](images/voc.png)
 1. Click on *Hands-On: Getting Started* in the left menu.
 1. Click on *My Work*.
 1. Click on *Upload* in the left pane of the workbench and follow the instructions to upload the `WarEagle.java` file.
