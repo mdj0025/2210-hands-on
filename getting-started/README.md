@@ -81,21 +81,21 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 
 ## Vocareum
 
+1. Read the following help page for an overview of logging in to and using Vocareum: [http://help.vocareum.com/article/30-getting-started-students](http://help.vocareum.com/article/30-getting-started-students).
 1. Login to Vocareum at [labs.vocareum.com](https://labs.vocareum.com).
-1. Click on *Help* in the top menu and read the "Getting Started - Students" information.
-1. Back in the main Vocareum interface, click on *My Work* for Lab 1.
-1. Click on *Upload* in the left pane of the Lab 1 workbench and follow the instructions to upload the `WarEagle.java` file.
-1. Click *Submit* to have this file submitted as your work for Lab 1.
-1. Notice the Submission Report is the output from running the JUnit tests that the instructor has associated with this submission.
-
+1. Click on *Hands-On: Getting Started* in the left menu.
+1. Click on *My Work*.
+1. Click on *Upload* in the left pane of the workbench and follow the instructions to upload the `WarEagle.java` file.
+1. Click *Submit*.
+1. View the Submission Report in the terminal window at the bottom of the workbench.
 
 
 ## jGRASP
 
 1. Open the `WarEagle.java` file in an editor window.
 1. Compile and run the file.
-1. Make a few changes in the file to embed some intentional errors.
-1. Resubmit this file for Lab 1 in Vocareum.
+1. Make a few changes in the file to embed some intentional errors, including coding style issues.
+1. Resubmit this file in Vocareum.
 1. Correct the errors you introduced and resubmit.
 1. Repeat the last few steps until you become comfortable with the workflow that you will use to submit your work to Vocareum for this course.
 
