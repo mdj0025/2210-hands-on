@@ -28,7 +28,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. Open your Engineering H: drive.
 2. Create a folder named `COMP2210`.
 3. Open `COMP2210` and create the following subdirectories, plus any others you may want.
-	- `labs`
+	- `hands-on`
 	- `assignments`
 	- `notes`
 	- `tools`
@@ -72,9 +72,10 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 		- [`http://google.github.io/styleguide/javaguide.html`](http://google.github.io/styleguide/javaguide.html)
 
 
-## Download the source code for Lab 1
-1. Open the `labs` directory and create a subdirectory named `lab01`.
-1. Download the following file to the `COMP2210/labs/lab01/` directory you created.
+## Access the provided source code
+
+1. Open the `hands-on` directory and create a subdirectory named `getting-started`.
+1. Download the following file to the `COMP2210/hands-on/getting-started/` directory you created.
 	- [`WarEagle.java`](src/WarEagle.java)
 
 
@@ -85,7 +86,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. Back in the main Vocareum interface, click on *My Work* for Lab 1.
 1. Click on *Upload* in the left pane of the Lab 1 workbench and follow the instructions to upload the `WarEagle.java` file.
 1. Click *Submit* to have this file submitted as your work for Lab 1.
-1. Notice the Submission Report is the output from running the JUnit tests that the instructor has associated with this lab.
+1. Notice the Submission Report is the output from running the JUnit tests that the instructor has associated with this submission.
 
 
 
