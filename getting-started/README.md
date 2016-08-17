@@ -42,9 +42,10 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 
 ## jGRASP
 
-1. If you are working on your own computer, download and install the latest version of jGRASP from [jgrasp.org](http://jgrasp.org). jGRASP is updated frequently so you will want to keep your installed version updated.
+1. If you are working on your own computer, download and install the latest version of jGRASP from [jgrasp.org](http://jgrasp.org).
 1. Launch jGRASP.
 1. Use the *Settings* menu to configure the following features, and others if desired.
+	- *Auto Update*: Select *Check for New Versions* -> *Automatically Check*. If this option is checked, jGRASP checks for a new version once per day and gives you the opportunity to install the new version immediately.
 	- *Auto Save*: If this option is checked, modified files are saved before a compile operation.
 	- *Auto Compile*: If this option is checked, files and projects will be compiled before a run or debug operation.
 	- *CSD Window Settings > Auto Generate CSD*: If this option is checked, a CSD is generated automatically when a file is loaded, edited, compiled, etc.
@@ -90,6 +91,8 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. Click on *Upload* in the left pane of the workbench and follow the instructions to upload the `WarEagle.java` file.
 1. Click *Submit*.
 1. View the Submission Report in the terminal window at the bottom of the workbench.
+	- The submission report is simply the output of compiling, running a checkstyle audit, and executing JUnit tests. It is exactly what you would see at the command line if you were doing this yourself.
+	- The submission report doesn't record a grade. Grading only occurs once the submission deadline is passed.
 
 
 ## jGRASP
