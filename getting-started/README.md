@@ -77,7 +77,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 ## Access the provided source code
 
 1. Open the `hands-on` directory and create a subdirectory named `getting-started`.
-1. Download the following file to the `COMP2210/hands-on/getting-started/` directory you created. The easiest way to download the file will be to click on the *Raw* button to load a plain-text version in the browser window, then right-click in the window and choose the *Save as ...* option. Make sure you save it as `WarEagle.java`.
+1. Download the following file to the `COMP2210/hands-on/getting-started/` directory you created. The easiest way to download the file will be to click on the hyperlink below, then click on the *Raw* button to load a plain-text version in the browser window, and then right-click in the window and choose the *Save as ...* option. Make sure you save it as `WarEagle.java`.
 	- [`WarEagle.java`](src/WarEagle.java)
 
 
