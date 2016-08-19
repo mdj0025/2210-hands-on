@@ -3,6 +3,10 @@
 # Shell scripts
 *.sh
 
+# makefiles
+makefile
+Makefile
+
 # Compiled source #
 ###################
 *.com
