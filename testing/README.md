@@ -39,8 +39,8 @@ public int search(int[] a, int target) {
 You may see the problem right away, but this lab is designed to illustrate how testing can expose errors such as this one. We will be using the [JUnit](http://junit.org/junit4/) testing framework, so you must have that configured on the machine you're using in order to complete this lab.
 
 1. Download the following files to the directory that you created for this lab.
-	- [LinearSearch1.java](LinearSearch1.java)
-	- [LinearSearch1Test.java](LinearSearch1Test.java)
+	- [LinearSearch1.java](src/LinearSearch1.java)
+	- [LinearSearch1Test.java](src/LinearSearch1Test.java)
 	- (Remember, an easy way to download a file is to click on the provided link, then click on the *Raw* button to load a plain-text version of the file. Once the plain-text is loaded in the browser window, right click in the window and use the *Save as ...* option to download the file. Make sure you store it without the `.txt` extension.)
 
 1. Open `LinearSearch1.java` in jGRASP and compile it.
@@ -110,8 +110,8 @@ One or both of these forms are appropriate for many linear scans of an array, bu
 Since the version of linear search we're writing needs to return the location (index) of the target element in a, the second form is the one we will need to use.
 
 1. Download the following files to the directory that you created for this lab.
-	- [LinearSearch2.java](LinearSearch2.java)
-	- [LinearSearch2Test.java](LinearSearch2Test.java)
+	- [LinearSearch2.java](src/LinearSearch2.java)
+	- [LinearSearch2Test.java](src/LinearSearch2Test.java)
 
 1. Open `LinearSearch2.java` in jGRASP and compile it.
 	- Note that the `search` method has been rewritten using the conventional `for` loop form of the linear scan solution strategy.
@@ -126,7 +126,7 @@ Since the version of linear search we're writing needs to return the location (i
 ## Testing a min method
 
 1. Download the following file to the directory that you created for this lab.
-	- [MinOfThree.java](MinOfThree.java)
+	- [MinOfThree.java](src/MinOfThree.java)
 
 1. Open `MinOfThree.java` and compile it.
 	- Read and study the two implementations of minimum: `min1()` and `min2()`. Think about the following questions.
