@@ -51,6 +51,7 @@ You may see the problem right away, but this lab is designed to illustrate how t
 1. Examine the three test methods in `LinearSearch1Test`.
 	- Note that a "test method" begins with the `@Test` annotation. Any method without this annotation is not considered a test method and will not be automatically called by a JUnit runner.
 	- Each test method is structured according to the same pattern:
+
 		```java
 		int[] a = // a sample array to be searched through
 		int target = // a sample value to be searched for
@@ -58,6 +59,7 @@ You may see the problem right away, but this lab is designed to illustrate how t
 		int actual = LinearSearch1.search(a, target) // the actual value that is returned
 		assertEquals(expected, actual); // check if the method returned the expected value
 		```
+
 	- There isn't just one way to structure and write a test method, but following this pattern isn't a bad idea - especially when you're just starting out. Following this pattern offers a few advantages:
 		- It's simple and easy to remember.
 		- It reinforces the one-to-one correspondence of a "test method" and a "test case".
