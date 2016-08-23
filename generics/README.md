@@ -100,7 +100,7 @@ A method is *generic* if it declares one or more *type variables*. In this porti
 
 ### Making the `min` method generic
 
-1. Open `GenericsB.java` in jGRASP then compile it.
+1. Open [`GenericsB.java`](src/GenericsB.java) in jGRASP then compile it.
 
 1. Read the type safety warning that the compiler reports, and examine the source of the warning in the code. Make sure you can answer the following questions.
 
@@ -165,7 +165,7 @@ A method is *generic* if it declares one or more *type variables*. In this porti
 
 A class or interface that declares one or more generic variables is called a *generic type*. In this portion of the lab, you will make a class generic.
 
-1. Open `GenericsC.java` in jGRASP then compile it.
+1. Open [`GenericsC.java`](src/GenericsC.java) in jGRASP then compile it.
 
 	- At this point you should be familiar with the two type-safety warnings given by the compiler. You should be able to understand the source of the error: the use of the raw types `List` and `Collection`.
 
