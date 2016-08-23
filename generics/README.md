@@ -60,8 +60,8 @@ A method is *generic* if it declares one or more *type variables*. In this porti
 1. Compile `GenericsA` and note the error that now results.
 
 	```
-	Lab3AGenerics.java:36: error: method search in class Lab3AGenerics cannot be applied to given types;
-	      int i = Lab3AGenerics.search(a1, 8);
+	GenericsA.java:36: error: method search in class GenericsA cannot be applied to given types;
+	      int i = GenericsA.search(a1, 8);
 	                                    ^
 	  required: T[],T
 	  found: int[],int
@@ -80,7 +80,7 @@ A method is *generic* if it declares one or more *type variables*. In this porti
 	- Change the method call to the following:
 
 	```java
-	int i = Lab3AGenerics.<Integer>search(a1, 8);
+	int i = GenericsA.<Integer>search(a1, 8);
 	```
 
 1. Compile `GenericsA` and note the error that results.
