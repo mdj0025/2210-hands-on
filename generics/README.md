@@ -114,7 +114,7 @@ A method is *generic* if it declares one or more *type variables*. In this porti
 
 1. Make sure you understand why we used `Comparable` for the parameter's type in the first place.
 
-	- To find the minimum, we have to be able to compare the elements in the array on the basis of "less than or equal to." That is, we have to compare the elements in the array based on a defined *total order*. If value $x$ precedes $y$ in a total order, the value $x$ is *less than* the value $y$. It doesn't matter what type $x$ and $y$ are, this definition of *less than* is true for all types with a total order. The `Comparable` interface is designed to serve as a marker or contract for any reference type that defines a total order on its values. So whatever type is actually in the array, it must implement the `Comparable` interface.
+	- To find the minimum, we have to be able to compare the elements in the array on the basis of "less than or equal to." That is, we have to compare the elements in the array based on a defined *total order*. If value _x_ precedes _y_ in a total order, the value _x_ is *less than* the value _y_. It doesn't matter what type _x_ and _y_ are, this definition of *less than* is true for all types with a total order. The `Comparable` interface is designed to serve as a marker or contract for any reference type that defines a total order on its values. So whatever type is actually in the array, it must implement the `Comparable` interface.
 
 1. Declare a type variable for the `min` method, and change the parameter and local variables to be of that type. The method should appear as follows:
 
