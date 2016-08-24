@@ -39,7 +39,7 @@ As an example, let's say we have a class named `PlayList` that maintains a list 
 ```java
 public class PlayList<Song> implements Iterable<Song> {
    // fields, methods, etc.
-   Iterator<Song> iterator() {
+   public Iterator<Song> iterator() {
       // create an Iterator object over the Songs in the PlayList.
    }
 }
@@ -59,12 +59,12 @@ for (Song track : tailgate) {
 }
 ```
 
-The `foreach` loop is the standard idiom in Java for iterating over `Iterable` objects. It is just a more compact form of the following more general pattern:
+The `for-each` loop is the standard idiom in Java for iterating over `Iterable` objects. It is just a more compact form of the following more general pattern:
 
 ```java
-Iterator<Song> dj tailgate.iterator();
+Iterator<Song> dj = tailgate.iterator();
 while (dj.hasNext()) {
-   Song song = dh.next();
+   Song song = dj.next();
    song.play();
 }
 ```
@@ -80,16 +80,16 @@ while (dj.hasNext()) {
 1. Run `IteratorExample.java` and observe its output.
 
 1. Use the provided jGRASP Canvas file (`IteratorExample.jgrasp_canvas.xml`) to watch the execution of this code.
-   - Click on the Canvas file in the jGRASP Browse tab or click on the *Run in Canvas* button (![](images/run_canvas.png)) in the jGRASP tool bar.
+   - Click on the Canvas file in the jGRASP Browse tab or click on the *Run in Canvas* button ![](images/run_canvas.png) in the jGRASP tool bar.
    - Once the Canvas window opens, resize it so that it best fits your display.
    - You can use any of the following controls to watch the program execute.
-      - *Play* (![](images/play.png)) - Starts the program running in auto-step mode.
-      - *Step Over* (![](images/step_over.png)) - Manually steps over each statement.
-      - *Step In* (![](images/step_in.png)) - Manually steps into each statement (method call).
+      - *Play* ![](images/play.png) - Starts the program running in auto-step mode.
+      - *Step Over* ![](images/step_over.png) - Manually steps over each statement.
+      - *Step In* ![](images/step_in.png) - Manually steps into each statement (method call).
 
 1. Study the source code again and make sure you understand how the `Iterator` interface allows a single method to traverse four distinct collection types.
 
-1. Modify the body of the `toString` method so that it uses the `foreach` iterator idiom instead.
+1. Modify the body of the `toString` method so that it uses the `for-each` iterator idiom instead.
 
 
 ## Iterators - a common error
