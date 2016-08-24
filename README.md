@@ -5,3 +5,4 @@ in lecture and the assignments. They are ungraded but strongly encouraged.
 
 1. [Getting Started](getting-started/)
 1. [Testing](testing/)
+1. [Generics](generics/)
