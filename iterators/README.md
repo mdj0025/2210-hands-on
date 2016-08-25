@@ -32,42 +32,52 @@ The *iterator pattern* is one of the most common programming patterns that we us
 
 The real power of an iterator is this: Through the `Iterator` interface, we can traverse a collection of elements **without knowing exactly what the collection is or how it is structured.** Now we can perform a linear scan on ... *anything*.
 
-For us to iterate over something, that something will have to provide us with an `Iterator` object over its elements. The standard (idiomatic) way of doing that in Java is for the "something" to implement the `Iterable` interface, thereby obliging it to provide a method named `iterator` that returns an `Iterator` object over its elements.
-
-As an example, let's say we have a class named `PlayList` that maintains a list of music. In order for users of the `PlayList` class to be able to iterate over each music track, the `PlayList` class should implement the `Iterable` interface, thus providing the `iterator` method that users can call to get the needed `Iterator` object. Like so:
+For us to iterate over something, that something will have to provide us with an `Iterator` object over its elements. The standard (idiomatic) way of doing that in Java is for the "something" to implement the `Iterable` interface, thereby obliging it to provide a method named `iterator` that returns an `Iterator` object over its elements. Let's say that this "something" is a class named `AnIterableCollection`. Then the shell of the class must look something like this:
 
 ```java
-public class PlayList<Song> implements Iterable<Song> {
+public class AnIterableCollection<T> implements Iterable<T> {
    // fields, methods, etc.
-   public Iterator<Song> iterator() {
-      // create an Iterator object over the Songs in the PlayList.
+   public Iterator<T> iterator() {
+      // create an Iterator object over the elements in this collection.
    }
 }
 ```
 
-Since the `PlayList` class provides iteration behavior, users of the class can write code to play all the songs in a given playlist very easily. Like so:
+Many of the collection classes in the [Java Collections Framework (JCF)](https://docs.oracle.com/javase/8/docs/technotes/guides/collections/) are *iterable* so we can use `ArrayList` for an example. Suppose we have a class named `Song` that models music that we listen to, and suppose we use an `ArrayList` to create a playlist of songs for game day.
 
 ```java
-PlayList<Song> tailgate = new PlayList<Song>();
-// add music for a tailgate ...
-tailgate.add(new Song("Welcome to the Jungle"));
-tailgate.add(new Song("War Eagle"));
-// add some more ...
-// now play all the songs:
-for (Song track : tailgate) {
-   track.play();
-}
+ArrayList<Song> playlist = new ArrayList<>();
+playlist.add(new Song("War Eagle"));
+playlist.add(new Song("Welcome to the Jungle"));
+playlist.add(new Song("All I Do Is Win"));
+playlist.add(new Song("Sweet Caroline"));
 ```
 
-The `for-each` loop is the standard idiom in Java for iterating over `Iterable` objects. It is just a more compact form of the following more general pattern:
+Since the `ArrayList` class implements the `Iterable` interface, we can use standard iteration patterns to play each song in our playlist. The `for-each` loop is the standard idiom in Java for iterating over `Iterable` objects.
 
 ```java
-Iterator<Song> dj = tailgate.iterator();
-while (dj.hasNext()) {
-   Song song = dj.next();
+for (Song song : playlist) {
    song.play();
 }
 ```
+
+The `for-each` loop is just a more compact form of the following more general pattern:
+
+```java
+Iterator<Song> itr = playlist.iterator();
+while (itr.hasNext()) {
+   itr.next().play();
+}
+```
+
+For now we will mostly use one of these two patterns, but it's worth pointing out that Java 8 introduced new features that provide us with a very compact iteration idiom.
+
+```java
+playlist.forEach(song -> song.play());
+```
+
+We will stick to the traditional patterns for now, but we will revisit these new features later on.
+
 
 
 ## Iterators - an example
