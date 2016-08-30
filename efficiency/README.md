@@ -1,10 +1,6 @@
 <!---
    Description of the Hands-On: Efficiency activity.
 
-   Command used to generate HTML:
-
-   pandoc lab5.md -o lab5.html -S -s -t html -c tables.css --highlight-style tango --mathjax
-
    @author     Dean Hendrix (dh@auburn.edu)
    @version    2016-08-30
 -->
@@ -118,6 +114,15 @@ The time complexity of many algorithms can described by a polynomial function. T
 Of course not all algorithms have polynomial time complexity. Common orders of growth that we will see in this course include $\log N$, $N$, $N\log N$, $N^2$, $N^3$, $2^N$, and $N!$. For the purposes of this lab, however, we will restrict ourselves to talking about algorithms with time complexity proportional to a *polynomial*.
 
 Timing a such a program as its input increases by a factor of two allows us to generate data like the following.
+
+| **N**   | **T(N)**    | **Ratio**       |
+| ---     | ---         | ---             |
+| N       | T(N)        |                 |
+| 2N      | T(2N)       | T(2N) / T(N)    |
+| 4N      | T(4N)       | T(4N) / T(2N)   |
+| 8N      | T(8N)       | T(8N) / T(4N)   |
+| ...     | ...         | ...             |
+| 2^k*N   | T(2^k*N)    | T(2^k*N) / T(2^(k-1)*N) |
 
 
    $N$        $T(N)$          $Ratio$
