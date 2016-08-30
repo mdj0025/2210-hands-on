@@ -116,7 +116,7 @@ Of course not all algorithms have polynomial time complexity. Common orders of g
 Timing a such a program as its input increases by a factor of two allows us to generate data like the following.
 
 | **N**   | **T(N)**    | **Ratio**       |
-| ---     | ---         | ---             |
+| :---:   | :---:       | :---:           |
 | N       | T(N)        |                 |
 | 2N      | T(2N)       | T(2N) / T(N)    |
 | 4N      | T(4N)       | T(4N) / T(2N)   |
