@@ -105,15 +105,13 @@ The `EarlyExit` class demonstrates how you can measure this performance differen
 
 More important that measuring running time *per se* is being able to characterize an algorithm's *time complexity*. The time complexity of an algorithm dictates how **scalable** the algorithm is; that is, whether or not the algorithm's running time will be practical as the problem size increases.
 
-A concrete way to think about scalability is to ask the question "What happens to running time if the problem becomes twice as large as it currently is?" Is our algorithm still useful if the problem size we expect suddenly doubles? What if it doubles again? Characterizing the algorithm's time complexity is the first step in understanding the algorithm's scalability.
+A concrete way to think about scalability is to ask the question "*What happens to running time if the problem becomes twice as large as it currently is?*" Is our algorithm still useful if the problem size we expect suddenly doubles? What if it doubles again? Characterizing the algorithm's time complexity is the first step in understanding the algorithm's scalability.
 
 One approach to characterizing time complexity is to empirically answer the doubling questions above by timing the implemented algorithm on increasing problem sizes. By making observations of how the running time is affected by doubling the size of the input, we can predict what the algorithm's time complexity is. (Strictly speaking, the notion of time makes sense for an *implemented* algorithm -- a program -- but not for an *algorithm*. We could perhaps speak in terms of the "work" or "computational steps" required by an algorithm, but "time" only makes sense when referring to a running program. Even so, the terms *time complexity* and *time* are used in the context of algorithms and we are expected to implicitly understand the distinction.)
 
-The time complexity of many algorithms can described by a polynomial function. The running time of such an algorithm thus satisfies the relationship $T(N) \propto c \cdot f(N)$, where $N$ is a measure of the size of the problem the algorithm is solving, $T(N)$ is a function that describes the time required by the algorithm for a given problem size, $c$ is a constant, and $f(N) = N^k$ for some $k > 0$. The function $f$ is called the *order of growth* of the algorithm's running time since the amount of time required by the algorithm as the problem size increases grows in proportion to the function $f$.
+The time complexity of many algorithms can described by a polynomial function. That is, the time complexity function (say *T(N)*) is proportional to some polynomial function (*f(N) = N^k*). The function *f* is called the *order of growth* of the algorithm's time complexity since the amount of work required by the algorithm as the problem size increases grows in proportion to the function *f*. For example, *f(N) = N^2* would characterize a *quadratic* growth rate.
 
-Of course not all algorithms have polynomial time complexity. Common orders of growth that we will see in this course include $\log N$, $N$, $N\log N$, $N^2$, $N^3$, $2^N$, and $N!$. For the purposes of this lab, however, we will restrict ourselves to talking about algorithms with time complexity proportional to a *polynomial*.
-
-Timing a such a program as its input increases by a factor of two allows us to generate data like the following.
+If we were to implement an algorithm with polynomial time complexity in a Java method, we could empirically discover its *order of growth* by recording the running time of the method as we systematically increase the problem size (*N*) by a factor of two, as shown in the following table.
 
 | **N**   | **T(N)**    | **Ratio**       |
 | :---:   | :---:       | :---:           |
@@ -122,42 +120,23 @@ Timing a such a program as its input increases by a factor of two allows us to g
 | 4N      | T(4N)       | T(4N) / T(2N)   |
 | 8N      | T(8N)       | T(8N) / T(4N)   |
 | ...     | ...         | ...             |
-| 2^k*N   | T(2^k*N)    | T(2^k*N) / T(2^(k-1)*N) |
+| 2^k x N | T(2^k x N)  | T(2^k x N) / T(2^(k-1) x N) |
 
+Since we know that the time complexity *T(N)* is proportional to a polynomial function and since we're doubling *N* on each step, the values in the **Ratio** column will approach a constant value approximately equal to *2^k*. Solving for *k* would then give us the degree of the polynomial. For example, the following table suggests that the underlying algorithm being timed has time complexity proportional to *N^2*.
 
-   $N$        $T(N)$          $Ratio$
---------    ----------     --------------------
-  $N_0$      $T(N_0)$        ---
-  $N_1$      $T(N_1)$       $T(N_1)~/~T(N_0)$
-  $N_2$      $T(N_2)$       $T(N_2)~/~T(N_1)$
-$\dots$      $\dots$        $\dots$
-  $N_i$      $T(N_i)$       $T(N_i)~/~T(N_{i-1})$
-$\dots$      $\dots$        $\dots$
-  $N_m$      $T(N_m)$       $T(N_m)~/~T(N_{m-1})$
----------------------------------------------
+| **N** |     **T(N)** (sec.) |    **Ratio**    |
+|  ---: |     -------------:  |    ---------:   |
+|   250 |              0.061  |                 |      
+|   500 |              0.042  |          1.35   |
+|  1000 |              0.112  |          2.67   |
+|  2000 |              0.340  |          3.04   |
+|  4000 |              1.298  |          3.82   |
+|  8000 |              5.334  |          4.11   |
+| 16000 |             21.880  |          4.10   |
+| 32000 |             85.763  |          3.92   |
+| 64000 |            345.634  |          4.03   |
 
-
-Since $\frac{N_i}{N_{i-1}} = 2$ and $T(N) \propto cN^k$, then
-
-\begin{equation}
-\frac{T(N_i)}{T(N_{i-1})} = \frac{T(2N_{i})}{T(N_{i})} \propto \frac{c \cdot(2N_{i})^{k}}{c \cdot N^{k}_{i}} = \frac{c \cdot 2^k \cdot N_{i}^k}{c \cdot N_{i}^k} = 2^k.
-\end{equation}
-
-So by observing the value that the ratio of $T(N_{i})~/~T(N_{i-1})$ converges toward, we can set this value equal to $2^{k}$ and simply solve for $k$, which is the power (order) of the polynomial that describes the time complexity of our algorithm. For example, the following table suggests that the underlying algorithm being timed has time complexity proportional to $N^2$.
-
-
-     $N$       $T(N)$ (sec.)                  $Ratio$
---------    ----------------     --------------------
-    250                0.061                      ---
-    500                0.042                     1.35
-   1000                0.112                     2.67
-   2000                0.340                     3.04
-   4000                1.298                     3.82
-   8000                5.334                     4.11
-  16000               21.880                     4.10
-  32000               85.763                     3.92
-  64000              345.634                     4.03
------------------------------------------------------
+Of course not all algorithms have polynomial time complexity. Common orders of growth that we will see in this course include *log N*, *N*, *N log N*, *N^2*, *N^3*, *2^N*, and *N!*. For the purposes of this lab, however, we will restrict ourselves to talking about algorithms with time complexity proportional to a *polynomial*. (*f(N) = N^k* for *k* > 0)
 
 
 The `TimeComplexity` class demonstrates how you can generate data that will allow you to characterize polynomial time complexity.
@@ -167,5 +146,3 @@ The `TimeComplexity` class demonstrates how you can generate data that will allo
 1. Run this program and observe its output.
 
 1. Interact with this code and make sure that you understand everything that it does and how you might apply it for your own purposes.
-
-
