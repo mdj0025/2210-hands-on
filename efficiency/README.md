@@ -79,7 +79,7 @@ The two search methods below illustrate this idea.
       return found;
    }
 
-   /** A linear search that exists as soon as the result of the search is known. */
+   /** A linear search that exits as soon as the result of the search is known. */
    private static <T> boolean searchB(List<T> list, T target) {
       for (T element : list) {
          if (element.equals(target)) {
