@@ -68,7 +68,7 @@ The crux of making code more efficient is avoiding unnecessary work. Sometimes t
 The two search methods below illustrate this idea.
 
 ```java
-/** A linear search that exits only after scanning the entire list. */
+   /** A linear search that exits only after scanning the entire list. */
    private static <T> boolean searchA(List<T> list, T target) {
       boolean found = false;
       for (T element : list) {
