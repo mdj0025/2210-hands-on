@@ -31,7 +31,7 @@ This activity focuses on empirically measuring a program's running time. By comp
 
 ## Measuring running time
 
-Java provides two methods for measuring time: `System.nanoTime()` and `System.currentTimeMillis()`. We could use either for our purposes in this lab, but we will use `nanoTime()` since it is expressly designed to measure *elapsed time*. Note that the `currentTimeMillis()` method is designed to measure "wall-clock" time. For more information on these methods, see the following links.
+Java provides the following two methods for measuring time: `System.nanoTime()` and `System.currentTimeMillis()`. We could use either for our purposes in this lab, but we will use `nanoTime()` since it is expressly designed to measure *elapsed time*. Note that the `currentTimeMillis()` method is designed to measure "wall-clock" time. For more information on these methods, see the following links.
 
 - [A StackOverflow post](http://stackoverflow.com/questions/351565/system-currenttimemillis-vs-system-nanotime)
 - [Java 8 API for `System.nanoTime()`](https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#nanoTime--)
@@ -63,13 +63,13 @@ The value in `elapsedTime` represents the number of nanoseconds that method `foo
 
 ## Improving performance: avoid unnecessary work
 
-The crux of making code more efficient is avoiding unnecessary work. Sometimes this can mean being more careful in how the code is written; for example, making sure a search algorithm terminates as soon as the result of the search can be known.
+The crux of making code more efficient is avoiding unnecessary work. Sometimes this can mean being more careful in how the code is written; for example, making sure a search algorithm terminates as soon as the result of the search is known.
 
 The two search methods below illustrate this idea.
 
 ```java
-   // exits only after examining the entire list
-   private static <T> boolean searchA(List<T> list, T target){
+/** A linear search that exits only after scanning the entire list. */
+   private static <T> boolean searchA(List<T> list, T target) {
       boolean found = false;
       for (T element : list) {
          if (element.equals(target)) {
@@ -79,8 +79,8 @@ The two search methods below illustrate this idea.
       return found;
    }
 
-   // exits as soon as it knows the status of the search
-   private static <T> boolean searchB(List<T> list, T target){
+   /** A linear search that exists as soon as the result of the search is known. */
+   private static <T> boolean searchB(List<T> list, T target) {
       for (T element : list) {
          if (element.equals(target)) {
             return true;
@@ -105,13 +105,13 @@ The `EarlyExit` class demonstrates how you can measure this performance differen
 
 ## Characterizing time complexity
 
-More important that measuring running time *per se* is being able to characterize an algorithm's *time complexity*. The time complexity of an algorithm dictates how **scalable** the algorithm is; that is, whether or not the algorithm's running time will be practical as the problem size increases.
+More important than measuring running time *per se* is being able to characterize an algorithm's *time complexity*. The time complexity of an algorithm dictates how **scalable** the algorithm is; that is, whether or not the algorithm's running time will be practical as the problem size increases.
 
 A concrete way to think about scalability is to ask the question "*What happens to running time if the problem becomes twice as large as it currently is?*" Is our algorithm still useful if the problem size we expect suddenly doubles? What if it doubles again? Characterizing the algorithm's time complexity is the first step in understanding the algorithm's scalability.
 
 One approach to characterizing time complexity is to empirically answer the doubling questions above by timing the implemented algorithm on increasing problem sizes. By making observations of how the running time is affected by doubling the size of the input, we can predict what the algorithm's time complexity is. (Strictly speaking, the notion of time makes sense for an *implemented* algorithm -- a program -- but not for an *algorithm*. We could perhaps speak in terms of the "work" or "computational steps" required by an algorithm, but "time" only makes sense when referring to a running program. Even so, the terms *time complexity* and *time* are used in the context of algorithms and we are expected to implicitly understand the distinction.)
 
-The time complexity of many algorithms can described by a polynomial function. That is, the time complexity function (say *T(N)*) is proportional to some polynomial function (*f(N) = N^k*). The function *f* is called the *order of growth* of the algorithm's time complexity since the amount of work required by the algorithm as the problem size increases grows in proportion to the function *f*. For example, *f(N) = N^2* would characterize a *quadratic* growth rate.
+The time complexity of many algorithms can described by a polynomial function. That is, the time complexity function *T(N)* is proportional to some polynomial function *f(N) = N^k*. The function *f* is called the *order of growth* of the algorithm's time complexity since the amount of work required by the algorithm as the problem size increases grows in proportion to the function *f*. For example, *f(N) = N^2* would characterize a *quadratic* growth rate.
 
 If we were to implement an algorithm with polynomial time complexity in a Java method, we could empirically discover its *order of growth* by recording the running time of the method as we systematically increase the problem size (*N*) by a factor of two, as shown in the following table.
 
@@ -124,7 +124,7 @@ If we were to implement an algorithm with polynomial time complexity in a Java m
 | ...     | ...         | ...             |
 | 2^k x N | T(2^k x N)  | T(2^k x N) / T(2^(k-1) x N) |
 
-Since we know that the time complexity *T(N)* is proportional to a polynomial function and since we're doubling *N* on each step, the values in the **Ratio** column will approach a constant value approximately equal to *2^k*. Solving for *k* would then give us the degree of the polynomial. For example, the following table suggests that the underlying algorithm being timed has time complexity proportional to *N^2*.
+Since we know that the time complexity *T(N)* is proportional to a polynomial function and since we're doubling *N* on each step, the values in the **Ratio** column will approach a constant value approximately equal to *2^k*. Solving for *k* would then give us the degree of the polynomial that characterizes this algorithm's time complexity. For example, the following table suggests that the underlying algorithm being timed has time complexity proportional to *N^2*.
 
 | **N** |     **T(N)** (sec.) |    **Ratio**    |
 |  ---: |     -------------:  |    ---------:   |
