@@ -16,15 +16,17 @@ This activity focuses on empirically measuring a program's running time. By comp
 
 ## Set-up
 
-1. Open the `COMP2210/labs` directory on your Engineering H: drive. (If you didn't complete the previous lab where you created this directory structure, do so now.)
+1. Open the `COMP2210/hands-on` directory on your Engineering H: drive. (If you didn't complete the previous lab where you created this directory structure, do so now.)
 
-1. Create the `lab05` directory.
+1. Create the `efficiency` directory.
 
-1. Download the zip file associated with this lab, store it in the `COMP2210/labs/lab05` directory, and unzip the file.
+1. Download the following files and store them in the `COMP2210/hands-on/efficiency` directory.
 
-      - [`lab05.zip`](http://www.eng.auburn.edu/~hendrtd/comp2210/labs/lab05/lab05.zip)
+   - [EarlyExit.java](src/EarlyExit.java)
+   - [TimingCode.java](src/TimingCode.java)
+   - [TimeComplexity.java](src/TimeComplexity.java)
 
-1. Open jGRASP to the `lab05` directory.
+1. Open jGRASP to the `COMP2210/hands-on/efficiency` directory.
 
 
 ## Measuring running time
@@ -126,7 +128,7 @@ Since we know that the time complexity *T(N)* is proportional to a polynomial fu
 
 | **N** |     **T(N)** (sec.) |    **Ratio**    |
 |  ---: |     -------------:  |    ---------:   |
-|   250 |              0.061  |                 |      
+|   250 |              0.061  |                 |
 |   500 |              0.042  |          1.35   |
 |  1000 |              0.112  |          2.67   |
 |  2000 |              0.340  |          3.04   |
