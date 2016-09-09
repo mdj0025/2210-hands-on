@@ -9,3 +9,4 @@ in lecture and the assignments. They are ungraded but strongly encouraged.
 1. [Iterators](iterators/)
 1. [Total Orders](total-orders/)
 1. [Efficiency](efficiency/)
+1. [Sorting](sorting/)
