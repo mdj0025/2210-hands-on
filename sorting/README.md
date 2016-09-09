@@ -62,7 +62,7 @@ The following sections can be done in any sequence. The instructions are written
 
 1. Click on the step-over button ![](images/step_over.png) in the Canvas window's toolbar until the statement `st.selectionSort(a);` is highlighted.
 
-1. Click on the step-in button ![](images/step_in.png) in the Canvas window's toolbar. Note that the viewers on the Canvas "light up" with their current values.
+1. Click on the step-in button ![](images/step_in.png) in the Canvas window's toolbar. Note that the viewers on the Canvas are populated with their current values.
 
 1. Step-over ![](images/step_over.png) each statement and observe its effect in the Canvas. Continue to do this until you get a good sense of the behavior of this method and the underlying algorithm.
 
@@ -97,11 +97,11 @@ The following sections can be done in any sequence. The instructions are written
 
 1. Click on the step-over button ![](images/step_over.png) in the Canvas window's toolbar until the statement `st.insertionSort(a);` is highlighted.
 
-1. Click on the step-in button ![](images/step_in.png) in the Canvas window's toolbar. Note that the viewers on the Canvas "light up" with their current values.
+1. Click on the step-in button ![](images/step_in.png) in the Canvas window's toolbar. Note that the viewers on the Canvas are populated with their current values.
 
 1. Step-over ![](images/step_over.png) each statement and observe its effect in the Canvas. Continue to do this until you get a good sense of the behavior of this method.
 
-1. Make sure you can predict what value `j` will have when the statement `break;` will execute next.
+1. Make sure you can predict what value `j` will cause the inner loop to stop on any given iteration of the outer loop.
 
 1. Continue to interact with the Canvas until you feel as though you have a solid understanding of insertion sort.
 
@@ -133,27 +133,34 @@ The *quicksort* algorithm isn't as conceptually simple as insertion sort or sele
 
 1. Click on the step-over button ![](images/step_over.png) in the Canvas window's toolbar until the statement `st.quicksort(a);` is highlighted.
 
-1. Click on the step-in button ![](images/step_in.png) in the Canvas window's toolbar. Note that the viewers on the Canvas "light up" with their current values.
+1. Click on the step-in button ![](images/step_in.png) in the Canvas window's toolbar. Note that the viewers on the Canvas are populated with their current values.
 
-1. Step-over ![](images/step_over.png) the `shuffle(a);` statement and pause when the `quick(a, 0, a.length - 1);` statement is highlighted.
+1. Step-over ![](images/step_over.png) the `shuffle(a);` statement and pause when the `qsort(a, 0, a.length - 1);` statement is highlighted.
 
-1. Step-in ![](images/step_in.png) to the call to `quick`.
+1. Step-in ![](images/step_in.png) to the call to `qsort`.
 
 1. Step-over ![](images/step_over.png) the `if` statement and pause when the call to `partitionOnPivot` is highlighted.
 
 	- This method will *partition* the array `a` around the given *pivot* value, which is designated in this call as `a[lo]`.
 
-	- Look at the Canvas to see what the pivot value will be and predict what the array will look like after the partioning is performed.
+   - Note that shuffling the array before calling `qsort` doesn't guarantee that `a[lo]` is  a *good* pivot value. So, here are some important questions to think about.
+
+      - What makes a *good* pivot value?
+      - What makes a *bad* pivot value?
+      - What would be the *best* pivot value for a given array?
+      - If the shuffling doesn't guarantee good pivot values, what does it do?
+
+   - Now look at the Canvas to see what the pivot value will be and predict what the array will look like after the partitioning is performed.
 
 1. Step-over ![](images/step_over.png) the call to `partitionOnPivot` and confirm your prediction with the Canvas. **Note that the pivot value is now in its final sorted position.**
 
-1. At this point the debugger is stopped on the first of two recursive calls to `quick`. This first call will recursively apply this process to the left half of the array; that is, it will sort `a[lo]` through `a[j-1]`.
+1. At this point the debugger is stopped on the first of two recursive calls to `qsort`. This first call will recursively apply this process to the left half of the array; that is, it will sort `a[lo]` through `a[j-1]`.
 
-1. Step-over ![](images/step_over.png) the first call to `quick` and see the effect reflected in the Canvas.
+1. Step-over ![](images/step_over.png) the first call to `qsort` and see the effect reflected in the Canvas.
 
-1. The second recursive call to `quick` will sort the right half of the array; that is, it will sort `a[j+1]` through `a[hi]`. (Remember that `a[j]` holds the pivot and it's already in the correct sorted position.)
+1. The second recursive call to `qsort` will sort the right half of the array; that is, it will sort `a[j+1]` through `a[hi]`. (Remember that `a[j]` holds the pivot and it's already in the correct sorted position.)
 
-1. Step-over ![](images/step_over.png) the second call to `quick` and see the effect reflected in the Canvas.
+1. Step-over ![](images/step_over.png) the second call to `qsort` and see the effect reflected in the Canvas.
 
 1. Continue to interact with the Canvas until you feel as though you have a solid understanding of quicksort.
 
@@ -166,7 +173,7 @@ The *quicksort* algorithm isn't as conceptually simple as insertion sort or sele
 
 #### Partition
 
-The actual work of rearranging elements of the array in quicksort is accomplished by *partitioning* array elements around a *pivot* value. It's important that you understand this process in detail. There are different strategies for partitioning, and different strategies for selecting the pivot value. For this course both strategies are simple and straightforward, and are based on those used by [Sedgewick](https://www.cs.princeton.edu/~rs/) in his introductory treatment of quicksort.
+The actual work of rearranging elements of the array in quicksort is accomplished by *partitioning* array elements around a *pivot* value. It's important that you understand this process in detail. There are different strategies for partitioning, and different strategies for selecting the pivot value. For this course both strategies are simple and straightforward.
 
 1. Open `Sorts.java` in jGRASP and compile it.
 
@@ -210,7 +217,7 @@ The *merge sort* algorithm isn't as conceptually simple as insertion sort or sel
 
 1. Click on the step-over button ![](images/step_over.png) in the Canvas window's toolbar until the statement `st.mergesort(a);` is highlighted.
 
-1. Click on the step-in button ![](images/step_in.png) in the Canvas window's toolbar. Note that the viewers on the Canvas "light up" with their current values.
+1. Click on the step-in button ![](images/step_in.png) in the Canvas window's toolbar. Note that the viewers on the Canvas are populated with their current values.
 
 1. Step-over ![](images/step_over.png) the statements of `mergesort` until `msort(a, 0, a.length - 1);`.{java} is highlighted.
 
@@ -240,6 +247,8 @@ The actual work of rearranging elements of the array in merge sort is accomplish
 1. If necessary, resize the Canvas window that opens to make sure it fits on your screen appropriately.
 
 1. Click on the step-over button ![](images/step_over.png) in the Canvas window's toolbar until the statement `st.merge(a, lo, mid, hi);` is highlighted.
+
+   - Note that `a` has been arranged so that `a[lo]..a[mid]` is sorted and `a[mid + 1]..a[hi]` is also sorted. These are the two sorted halves that need to be merged into one sorted whole.
 
 1. Step-in ![](images/step_in.png) to the call to `merge`.
 
