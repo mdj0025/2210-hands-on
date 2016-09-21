@@ -112,7 +112,7 @@ public class Sorts<T extends Comparable<T>> {
 
    /** Sorts a[lo..hi] into ascending order using the recursive mergesort algorithm. */
    private void msort(T[] a, int lo, int hi) {
-      if (hi <= lo) {
+      if (hi == lo) {
          return;
       }
       int mid = lo + (hi - lo) / 2;
