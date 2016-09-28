@@ -10,3 +10,4 @@ in lecture and the assignments. They are ungraded but strongly encouraged.
 1. [Total Orders](total-orders/)
 1. [Efficiency](efficiency/)
 1. [Sorting](sorting/)
+1. [Linked Nodes](linked-nodes/)
