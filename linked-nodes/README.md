@@ -18,7 +18,8 @@ This activity focuses on the fundamental mechanics of using singly- and doubly-l
 1. Create the `linked-nodes` directory.
 
 1. Download the following files and save them in the `COMP2210/hands-on/linked-nodes` directory.
-
+   - [SinglyLinked.java](src/SinglyLinked.java)
+   - [DoublyLinked.java](src/DoublyLinked.java)
 
 1. Open jGRASP to the `COMP2210/hands-on/linked-nodes` directory.
 
