@@ -3,7 +3,7 @@
 	Introduces basic requirements and procedures for lab.
 
 	@author:  Dean Hendrix <dh@auburn.edu>
-	@version: 2016-08-16
+	@version: 2017-01-13
 -->
 
 # Hands-On: Getting Started
@@ -61,7 +61,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. Use the *Tools* menu to configure the **Checkstyle plugin**.
 	- *Note: The Engineering lab machines have Checkstyle already installed and jGRASP will by default have this plugin configured. For your own machine, you will have to download and unzip Checkstyle first and then configure this plugin with the steps below. Also, you will have to configure the lab machines to use the correct checks file below.*
 	- Create the following directory: `COMP2210/tools/checkstyle`.
-	- Download to the directory you just created the jar file `checkstyle-7.1-all.jar` from the latest stable release of Checkstyle (7.1) available at the following URL.
+	- Download to the directory you just created the jar file `checkstyle-7.1-all.jar` from the latest stable release of Checkstyle (7.4) available at the following URL.
 		- [`http://sourceforge.net/projects/checkstyle/files/checkstyle/`](http://sourceforge.net/projects/checkstyle/files/checkstyle/)
 	- Download the XML file below and save it in the `checkstyle` directory you created.
 		- [`2210.google_checks.xml`](https://raw.githubusercontent.com/hendrtd/comp2210/master/coding_style_guidelines/2210.google_checks.xml)
