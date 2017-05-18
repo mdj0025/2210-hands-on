@@ -89,10 +89,14 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. Click on *Hands-On: Getting Started* in the left menu.
 1. Click on *My Work*.
 1. Click on *Upload* in the left pane of the workbench and follow the instructions to upload the `WarEagle.java` file.
+	- If the `work` folder is not highlighted in the left pane, you'll have to click on it first before clicking on *Upload*.
 1. Click *Submit*.
-1. View the Submission Report in the terminal window at the bottom of the workbench.
+1. The submission report will be shown in the terminal pane at the bottom and it will be available under *Details* -> *View Submission Report*.
 	- The submission report is simply the output of compiling, running a checkstyle audit, and executing JUnit tests. It is exactly what you would see at the command line if you were doing this yourself.
-	- The submission report doesn't record a grade. Grading only occurs once the submission deadline is passed.
+	- The submission report doesn't record a grade.
+1. Grading is done automatically upon submission, so you should notice that a yellow-highlited *Graded* designation has appeared next to the `LatestSubmission` folder in the left pane.
+	- You can see your grade by going back to the *Hands-On: Getting Started* page (just click on it at the top).
+1. From the main Vocareum page you can see grade statistics for all your assignments in a gradebook format.
 
 
 ## jGRASP
