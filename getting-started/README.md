@@ -3,7 +3,7 @@
 	Introduces basic requirements and procedures for lab.
 
 	@author:  Dean Hendrix <dh@auburn.edu>
-	@version: 2017-01-13
+	@version: 2017-05-18
 -->
 
 # Hands-On: Getting Started
@@ -13,7 +13,7 @@ You are asked to perform several activities that will help you prepare for the C
 
 ## Canvas
 
-Nagivate within Canvas and familiarize yourself with the organization of the course and the materials that are provided. In particular, be sure to:
+Navigate within Canvas and familiarize yourself with the organization of the course and the materials that are provided. In particular, be sure to:
 
 1. Read the official course syllabus.
 1. Register and log in to Piazza.
@@ -21,7 +21,7 @@ Nagivate within Canvas and familiarize yourself with the organization of the cou
 1. Make sure your Canvas account Notification Preferences are what you want. At a minimum, you are required to have all course announcements sent to your TigerMail immediately.
 
 
-## Directory Structure
+## Directory Structure and File Storage
 
 Use of the Engineering network drive is not required, but it is strongly encouraged. If you store all your work on the Engineering drive, you will always have your files backed up and available anywhere, anytime.
 
@@ -33,14 +33,14 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 	- `notes`
 	- `tools`
 4. Repeat the steps above on your own machine if you will be using it for completing work in this course.
-	- I would also recommend using a free backup and synchronization service like Dropbox (`dropbox.com`). You **never** want to be in the situation of losing all the work you've put in on an assignment.
+	- I would also recommend using a free backup and synchronization service like Dropbox (`dropbox.com`), Box (`box.com`), or other similar service. You **never** want to be in the situation of losing all the work you've put in on an assignment.
 	- If you want to get a head start on using a professional tool for backup, synchronization, and more, then you could explore the use of `git` (see `https://git-scm.com/`). This carries a steep learning curve and isn't necessary for 2210 so ... *caveat discipulus*.
 		- If you use `git` you may also want to use a web-based code hosting service like GitHub. I support the use of hosting services, but all assignment-related code must be kept strictly in **private** repositories during the semester. Although GitHub offers free private repos, there are hoops to jump through. I would recommend either GitLab or Bitbucket for relatively painless and free private repos.
 5. If you will be using your own computer or other off-campus computers to complete course work, refer to the following link to see how to keep your local files in sync with the Engineering drive.
 	- [`http://eng.auburn.edu/admin/ens/helpdesk/off-campus/index.html`](http://eng.auburn.edu/admin/ens/helpdesk/off-campus/index.html)
 
 
-## jGRASP
+## jGRASP, Checkstyle, and JUnit
 
 1. If you are working on your own computer, download and install the latest version of jGRASP from [jgrasp.org](http://jgrasp.org).
 1. Launch jGRASP.
@@ -63,7 +63,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 	- Create the following directory: `COMP2210/tools/checkstyle`.
 	- Download to the directory you just created the jar file `checkstyle-7.1-all.jar` from the latest stable release of Checkstyle (7.4) available at the following URL.
 		- [`http://sourceforge.net/projects/checkstyle/files/checkstyle/`](http://sourceforge.net/projects/checkstyle/files/checkstyle/)
-	- Download the XML file below and save it in the `checkstyle` directory you created.
+	- Download the XML file below and save it in the `checkstyle` directory you created. **This is the checks file that will be used in assignment grading.**
 		- [`2210.google_checks.xml`](https://raw.githubusercontent.com/hendrtd/comp2210/master/coding_style_guidelines/2210.google_checks.xml)
 	- Select *Tools > Checkstyle > Configure*.
 	- Set "Checkstyle Home" to the `COMP2210/tools/checkstyle/` directory.
@@ -72,9 +72,10 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 	- Note that the XML checks file that we're using is a slightly modified version of the Checkstyle checks for the Java coding style conventions published by Google.
 	- You should read through the style documentation here:
 		- [`http://google.github.io/styleguide/javaguide.html`](http://google.github.io/styleguide/javaguide.html)
+    - You should also familiarize yourself with a more general expectation of coding style and practice for this course:
+        - [`https://github.com/hendrtd/comp2210/blob/master/coding_style_guidelines/guidelines.md`](https://github.com/hendrtd/comp2210/blob/master/coding_style_guidelines/guidelines.md)
 
-
-## Access the provided source code
+## Access the provided source code for this activity
 
 1. Open the `hands-on` directory and create a subdirectory named `getting-started`.
 1. Download the following file to the `COMP2210/hands-on/getting-started/` directory you created. The easiest way to download the file will be to click on the hyperlink below, then click on the *Raw* button to load a plain-text version in the browser window, and then right-click in the window and choose the *Save as ...* option. Make sure you save it as `WarEagle.java`.
@@ -83,10 +84,8 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 
 ## Vocareum
 
-1. Read the following help page for an overview of logging in to and using Vocareum: [http://help.vocareum.com/article/30-getting-started-students](http://help.vocareum.com/article/30-getting-started-students).
-1. Login to Vocareum at [labs.vocareum.com](https://labs.vocareum.com). You should see a page similar to the following:
-	![Vocareum screenshot](images/voc.png)
-1. **You must enter a valid access code before the grace period ends.** Access cards can be purchsed in the AU Bookstore for $20.
+1. Read the instructions provided in the COMP 2210 course in Canvas to ensure that you can log in to Vocareum.
+    - Note that to use Vocareum, you must pay the $20 usage fee for the semester. Instructions for payment are in Canvas.
 1. Click on *Hands-On: Getting Started* in the left menu.
 1. Click on *My Work*.
 1. Click on *Upload* in the left pane of the workbench and follow the instructions to upload the `WarEagle.java` file.
