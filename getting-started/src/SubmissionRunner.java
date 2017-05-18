@@ -7,14 +7,14 @@ import org.junit.runner.notification.Failure;
 
 
 /**
- * WarEagleRunner.java
- * Provides a JUnit test runner that uses the Vocareum API to run student
- * assignment submissions.
+ * SubmissionRunner.java
+ * Provides a JUnit test runner that executes correctness tests and reports the results
+ * upon submission.
  *
  * @author Dean Hendrix (dh@auburn.edu)
- * @version 2016-08-17
+ * @version 2017-05-18
  */
-public class WarEagleRunner {
+public class SubmissionRunner {
 
     /** Drives execution. */
     public static void main(String[] args) {
