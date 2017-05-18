@@ -99,7 +99,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. From the main Vocareum page you can see grade statistics for all your assignments in a gradebook format.
 
 
-## jGRASP
+## Assignment workflow
 
 1. Open the `WarEagle.java` file in an editor window.
 1. Compile and run the file.
