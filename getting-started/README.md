@@ -8,7 +8,7 @@
 
 # Hands-On: Getting Started
 
-You are asked to perform several activities that will help you prepare for the COMP 2210 assignments. Although this is ungraded, you are strongly encouraged to complete each task. Be sure to ask your TA questions if you have trouble.
+You are asked to perform several activities that will help you prepare for the COMP 2210 assignments. Although this is not factored into your course grade, you are strongly encouraged to complete each task. Be sure to ask your TA questions if you have trouble.
 
 
 ## Canvas
@@ -40,7 +40,7 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 	- [`http://eng.auburn.edu/admin/ens/helpdesk/off-campus/index.html`](http://eng.auburn.edu/admin/ens/helpdesk/off-campus/index.html)
 
 
-## jGRASP, Checkstyle, and JUnit
+## jGRASP
 
 1. If you are working on your own computer, download and install the latest version of jGRASP from [jgrasp.org](http://jgrasp.org).
 1. Launch jGRASP.
@@ -50,30 +50,40 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 	- *Auto Compile*: If this option is checked, files and projects will be compiled before a run or debug operation.
 	- *CSD Window Settings > Auto Generate CSD*: If this option is checked, a CSD is generated automatically when a file is loaded, edited, compiled, etc.
 	- *Look And Feel*: This option allows you to select an overall look-and-feel for the windows, menus, etc.
-1. Use the *Tools* menu to configure the **JUnit plugin**.
-	- *Note: The Engineering lab machines have JUnit already installed and jGRASP will by default have this plugin configured. For your own machine, you will have to download and unzip JUnit first and then configure this plugin with the steps below.*
-	- Create the following directory: `COMP2210/tools/junit`.
-	- Download to the directory you just created the two jar files (`junit.jar` and `hamcrest-core.jar`) from the latest stable release of JUnit (4.12) available at the following URL.
-		- [`https://github.com/junit-team/junit/wiki/Download-and-Install`](https://github.com/junit-team/junit/wiki/Download-and-Install)
+
+
+## JUnit
+
+*Note: The Engineering lab machines have JUnit already installed and jGRASP will by default have this plugin configured. For your own machine, you will have to download and unzip JUnit first and then configure this plugin with the steps below.*
+1. Create the following directory: `COMP2210/tools/junit`.
+1. Download to the directory you just created the two jar files (`junit.jar` and `hamcrest-core.jar`) from the latest stable release of JUnit (4.12) available at the following URL.
+	- [`https://github.com/junit-team/junit/wiki/Download-and-Install`](https://github.com/junit-team/junit/wiki/Download-and-Install)
+1. In jGRASP, use the *Tools* menu to configure the **JUnit plugin**.
 	- Select *Tools > JUnit > Configure*.
 	- Set "JUnit Home" to the `COMP2210/tools/junit/` directory.
 	- Click *Ok*.
-1. Use the *Tools* menu to configure the **Checkstyle plugin**.
-	- *Note: The Engineering lab machines have Checkstyle already installed and jGRASP will by default have this plugin configured. For your own machine, you will have to download and unzip Checkstyle first and then configure this plugin with the steps below. Also, you will have to configure the lab machines to use the correct checks file below.*
-	- Create the following directory: `COMP2210/tools/checkstyle`.
-	- Download to the directory you just created the jar file `checkstyle-7.1-all.jar` from the latest stable release of Checkstyle (7.4) available at the following URL.
-		- [`http://sourceforge.net/projects/checkstyle/files/checkstyle/`](http://sourceforge.net/projects/checkstyle/files/checkstyle/)
-	- Download the XML file below and save it in the `checkstyle` directory you created. **This is the checks file that will be used in assignment grading.**
-		- [`2210.google_checks.xml`](https://raw.githubusercontent.com/hendrtd/comp2210/master/coding_style_guidelines/2210.google_checks.xml)
+
+
+## Checkstyle
+
+*Note: The Engineering lab machines have Checkstyle already installed and jGRASP will by default have this plugin configured. For your own machine, you will have to download and unzip Checkstyle first and then configure this plugin with the steps below. Also, you will have to configure the lab machines to use the correct checks file below.*
+1. Create the following directory: `COMP2210/tools/checkstyle`.
+1. Download to the directory you just created the jar file `checkstyle-8.1-all.jar` (the latest stable release of Checkstyle) or `checkstyle-6.13-all.jar` (the version Vocareum is using), both of which are available at the following URL.
+	- [`http://sourceforge.net/projects/checkstyle/files/checkstyle/`](http://sourceforge.net/projects/checkstyle/files/checkstyle/)
+1. Download the XML file below and save it in the `checkstyle` directory you created. **This is the checks file that will be used in assignment grading.**
+	- [`2210.google_checks.xml`](https://raw.githubusercontent.com/hendrtd/comp2210/master/coding_style_guidelines/2210.google_checks.xml)
+1. In jGRASP, use the *Tools* menu to configure the **Checkstyle plugin**.
 	- Select *Tools > Checkstyle > Configure*.
 	- Set "Checkstyle Home" to the `COMP2210/tools/checkstyle/` directory.
 	- Set "Checks File" to the `2210.google_checks.xml` file.
 	- Click *Ok*.
-	- Note that the XML checks file that we're using is a slightly modified version of the Checkstyle checks for the Java coding style conventions published by Google.
-	- You should read through the style documentation here:
-		- [`http://google.github.io/styleguide/javaguide.html`](http://google.github.io/styleguide/javaguide.html)
-    - You should also familiarize yourself with a more general expectation of coding style and practice for this course:
-        - [`https://github.com/hendrtd/comp2210/blob/master/coding_style_guidelines/guidelines.md`](https://github.com/hendrtd/comp2210/blob/master/coding_style_guidelines/guidelines.md)
+
+Note that the XML checks file that we're using is a slightly modified version of the Checkstyle checks for the Java coding style conventions published by Google.
+- You should read through the style documentation here:
+	- [`http://google.github.io/styleguide/javaguide.html`](http://google.github.io/styleguide/javaguide.html)
+- You should also familiarize yourself with a more general expectation of coding style and practice for this course:
+    - [`https://github.com/hendrtd/comp2210/blob/master/coding_style_guidelines/guidelines.md`](https://github.com/hendrtd/comp2210/blob/master/coding_style_guidelines/guidelines.md)
+
 
 ## Access the provided source code for this activity
 
@@ -85,7 +95,8 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 ## Vocareum
 
 1. Read the instructions provided in the COMP 2210 course in Canvas to ensure that you can log in to Vocareum.
-    - Note that to use Vocareum, you must pay the $20 usage fee for the semester. Instructions for payment are in Canvas.
+    - Note that to use Vocareum after the initial grace period, you must pay the $20 usage fee for the semester. Instructions for payment are in Canvas.
+1. Access Vocareum from the Hands-on: Getting Started page from within Canvas. (Note that Vocareum requires you to access each hands-on or assignment through Canvas first. After that, you can access things directly through Vocareum.)
 1. Click on *Hands-On: Getting Started* in the left menu.
 1. Click on *My Work*.
 1. Click on *Upload* in the left pane of the workbench and follow the instructions to upload the `WarEagle.java` file.
@@ -93,8 +104,8 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. Click *Submit*.
 1. The submission report will be shown in the terminal pane at the bottom and it will be available under *Details* -> *View Submission Report*.
 	- The submission report is simply the output of compiling, running a checkstyle audit, and executing JUnit tests. It is exactly what you would see at the command line if you were doing this yourself.
-	- The submission report doesn't record a grade.
-1. Grading is done automatically upon submission, so you should notice that a yellow-highlited *Graded* designation has appeared next to the `LatestSubmission` folder in the left pane.
+	- The submission report doesn't show a grade, but it does show you how many tests were run and how many of those passed.
+1. Grading is done with a different script and happens automatically upon submission. You should notice that a yellow-highlited *Graded* designation has appeared next to the `LatestSubmission` folder in the left pane.
 	- You can see your grade by going back to the *Hands-On: Getting Started* page (just click on it at the top).
 1. From the main Vocareum page you can see grade statistics for all your assignments in a gradebook format.
 
@@ -105,8 +116,10 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 1. Compile and run the file.
 1. Make a few changes in the file to embed some intentional errors, including coding style issues.
 1. Resubmit this file in Vocareum.
+	- Pay attention to the feedback that you get from Vocareum. Interpreting this feedback is crucial to being able to understand and correct errors.
 1. Correct the errors you introduced and resubmit.
 1. Repeat the last few steps until you become comfortable with the workflow that you will use to submit your work to Vocareum for this course.
+1. Also practice accessing and interacting with the activity in Vocareum both through Canvas and directly through Vocareum's website.
 
 
 ## Directory Structure

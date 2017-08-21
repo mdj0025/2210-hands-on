@@ -1,10 +1,9 @@
 /**
  * WarEagle.java
  * Prints an Auburn cheer to standard out.
- * Used in the Getting Started lab for COMP 2210.
  * 
  * @author   Dean Hendrix (dh@auburn.edu)
- * @version  2015-08-14
+ * @version  2017-08-21
  *
  */
 public final class WarEagle {

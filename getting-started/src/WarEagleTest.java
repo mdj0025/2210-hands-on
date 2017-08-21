@@ -6,7 +6,7 @@ import org.junit.Test;
  * Tests the WarEagle class with JUnit.
  *
  * @author  Dean Hendrix (dh@auburn.edu)
- * @version 2015-08-17
+ * @version 2017-08-21
  */
 public class WarEagleTest {
 
@@ -17,7 +17,8 @@ public class WarEagleTest {
    public void testCheer1() {
       String expected = "War Eagle!";
       String actual = WarEagle.cheer1();
-      Assert.assertEquals("", expected, actual);
+      String feedback = "The cheer1 method did not return the correct result.";
+      Assert.assertEquals(feedback, expected, actual);
    }
 
    /**
@@ -27,7 +28,8 @@ public class WarEagleTest {
    public void testCheer2() {
       String expected = "Bodda getta, bodda getta, bodda getta, bah!";
       String actual = WarEagle.cheer2();
-      Assert.assertEquals("", expected, actual);
+      String feedback = "The cheer1 method did not return the correct result.";
+      Assert.assertEquals(feedback, expected, actual);
    }
 
 }
