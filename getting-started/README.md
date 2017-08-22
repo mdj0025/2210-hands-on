@@ -8,7 +8,7 @@
 
 # Hands-On: Getting Started
 
-You are asked to perform several activities that will help you prepare for the COMP 2210 assignments. Although this is not factored into your course grade, you are strongly encouraged to complete each task. Be sure to ask your TA questions if you have trouble.
+You are asked to perform several activities that will help you prepare for the COMP 2210 assignments. Although this is part of your calculated course grade, you are strongly encouraged to complete each task. Be sure to ask your TA questions if you have trouble.
 
 
 ## Canvas
@@ -16,14 +16,16 @@ You are asked to perform several activities that will help you prepare for the C
 Navigate within Canvas and familiarize yourself with the organization of the course and the materials that are provided. In particular, be sure to:
 
 1. Read the official course syllabus.
-1. Register and log in to Piazza.
-1. Make sure you can find all the course notes.
+1. Register for and log in to Piazza.
+1. Familiarize yourself with the modules structure for the course.
+1. Complete everything in *M0 - Welcome to the Course*.
+1. Make sure you can find all the course notes, both within the modules and under the Files link.
 1. Make sure your Canvas account Notification Preferences are what you want. At a minimum, you are required to have all course announcements sent to your TigerMail immediately.
 
 
 ## Directory Structure and File Storage
 
-Use of the Engineering network drive is not required, but it is strongly encouraged. If you store all your work on the Engineering drive, you will always have your files backed up and available anywhere, anytime.
+Using the Engineering network drive to store your work is not required, but it is strongly encouraged. If you store all your work on the Engineering drive, you will always have your files backed up and available anywhere, anytime.
 
 1. Open your Engineering H: drive.
 2. Create a folder named `COMP2210`.
@@ -42,10 +44,11 @@ Use of the Engineering network drive is not required, but it is strongly encoura
 
 ## jGRASP
 
-1. If you are working on your own computer, download and install the latest version of jGRASP from [jgrasp.org](http://jgrasp.org).
-1. Launch jGRASP.
+1. If you are working on your own computer, download and install the latest version of jGRASP from [jgrasp.org](http://jgrasp.org). If you already have jGRASP installed on your own computer, be sure to update to the latest version.
+1. Launch jGRASP. 
+	- You will need to perform the following steps on each machine that you use (e.g., lab and personal).
 1. Use the *Settings* menu to configure the following features, and others if desired.
-	- *Auto Update*: Select *Check for New Versions* -> *Automatically Check*. If this option is checked, jGRASP checks for a new version once per day and gives you the opportunity to install the new version immediately.
+	- *Auto Update*: Select *Check for New Versions* -> *Automatically Check*. If this option is checked, jGRASP checks for a new version once per day and gives you the opportunity to install the new version immediately. This is recommended.
 	- *Auto Save*: If this option is checked, modified files are saved before a compile operation.
 	- *Auto Compile*: If this option is checked, files and projects will be compiled before a run or debug operation.
 	- *CSD Window Settings > Auto Generate CSD*: If this option is checked, a CSD is generated automatically when a file is loaded, edited, compiled, etc.
@@ -88,7 +91,7 @@ Note that the XML checks file that we're using is a slightly modified version of
 ## Access the provided source code for this activity
 
 1. Open the `hands-on` directory and create a subdirectory named `getting-started`.
-1. Download the following file to the `COMP2210/hands-on/getting-started/` directory you created. The easiest way to download the file will be to click on the hyperlink below, then click on the *Raw* button to load a plain-text version in the browser window, and then right-click in the window and choose the *Save as ...* option. Make sure you save it as `WarEagle.java`.
+1. Download the file below to the `COMP2210/hands-on/getting-started/` directory you created. The easiest way to download the file will be to click on the hyperlink below, then in the resulting window click on the *Raw* button to load a plain-text version in the browser window, and then right-click in the window and choose the *Save as ...* option. Make sure you save it as `WarEagle.java`.
 	- [`WarEagle.java`](src/WarEagle.java)
 
 
@@ -107,6 +110,7 @@ Note that the XML checks file that we're using is a slightly modified version of
 	- The submission report doesn't show a grade, but it does show you how many tests were run and how many of those passed.
 1. Grading is done with a different script and happens automatically upon submission. You should notice that a yellow-highlited *Graded* designation has appeared next to the `LatestSubmission` folder in the left pane.
 	- You can see your grade by going back to the *Hands-On: Getting Started* page (just click on it at the top).
+	- Vocareum automatically sends your grade to Canvas, so you should also be able to check in Canvas to see your current grade for any assignment.
 1. From the main Vocareum page you can see grade statistics for all your assignments in a gradebook format.
 
 
