@@ -7,10 +7,10 @@
  */
 public class CountNegatives {
 
-    /**
-     * Returns the number of negative values in the given array.
-     */
-    public static int countNegatives(int[]a) {
-        return -1;
-    }
+   /**
+    * Returns the number of negative values in the given array.
+    */
+   public static int countNegatives(int[]a) {
+      return -1;
+   }
 }
