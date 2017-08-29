@@ -6,7 +6,7 @@
 		% pandoc lab3.md -o lab3.html -S -s -t html --highlight-style tango
 
 	@author   Dean Hendrix (dh@auburn.edu)
-	@version  2016-08-23
+	@version  2017-08-29
 -->
 
 # Hands-On: Generics
@@ -97,6 +97,8 @@ A method is *generic* if it declares one or more *type variables*. In this porti
 
 1. Compile and run `GenericsA`. The `search` method is now generic and it is being called in a type-safe manner.
 
+1. Submit `GenericsA.java` to Hands-On: Generics (Generics A) in Vocareum to record your progress. Note that you will not be awarded full credit unless your submission compiles without warnings and errors.
+
 
 ### Making the `min` method generic
 
@@ -158,6 +160,8 @@ A method is *generic* if it declares one or more *type variables*. In this porti
 1. Compile `GenericsB` and notice that there are now no warnings -- the code is type-safe.
 
 	- Again, make sure you understand why this last step was necessary to ensure type-safety.
+
+1. Submit `GenericsB.java` to Hands-On: Generics (Generics B) in Vocareum to record your progress. Note that you will not be awarded full credit unless your submission compiles without warnings and errors.
 
 
 
@@ -252,6 +256,12 @@ A class or interface that declares one or more generic variables is called a *ge
 	- Recompile and note that the final warning has been eliminated and the code is now type-safe.
 
 
+1. Submit `GenericsC.java` to Hands-On: Generics (Generics C) in Vocareum to record your progress. Note that you will not be awarded full credit unless your submission compiles without warnings and errors.
+
+
 ## Wrap-up
 
 Generic typing is the accepted way to write general, type-safe code in Java. Since you will use generics from this point forward, it's very important that you not only grasp the high-level idea but also the low-level details. If you need to work through this lab again to make sure you understand everything that's here, please do so.
+
+Also, please make sure that you make the submissions to Vocareum. If you have questions about generics, your submissions on Vocareum will be useful starting points to help solve the problem.
+
