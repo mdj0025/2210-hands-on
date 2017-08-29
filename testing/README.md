@@ -2,7 +2,7 @@
 	Description for COMP 2210 Hands-On: Testing.
 
 	@author   Dean Hendrix (dh@auburn.edu)
-	@version  2016-08-16
+	@version  2017-08-28
 -->
 
 # Hands-On: Testing
@@ -137,8 +137,10 @@ Since the version of linear search we're writing needs to return the location (i
 		2. *Which method do you think stands a better chance of being correct, just from its appearance?*
 		3. *Are there any errors that are obvious just from reading the code?*
 
-1. Create a JUnit test file for this class.
+1. Create a JUnit test file named `MinOfThreeTest.java` for this class.
 
 1. Write a set of test methods that will help you decide on the correctness of both the `MinOfThree.min1()` method and the `MinOfThree.min2()` method.
+
+1. Submit your `MinOfThreeTest.java` file to Hands-On: Testing in Vocareum to record your completion of this activity.
 
 1. Once you are satisfied with the results of your testing, reflect on your answers to the three questions asked above.
