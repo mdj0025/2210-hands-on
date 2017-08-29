@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
  */
 public class SubmissionGraderC {
 
-    private static final int MAX_POINTS = 100;
+    private static final int MAX_POINTS = 30;
 
     /** Drives execution. */
     public static void main(String[] args) throws FileNotFoundException {
