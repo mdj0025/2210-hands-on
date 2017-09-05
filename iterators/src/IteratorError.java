@@ -13,7 +13,7 @@ import java.util.List;
 public class IteratorError {
 
    /**
-    * Identify and eliminate the error regarding the use
+    * Identify and eliminate the errors regarding the use
     * of the iterator itr in the following method.
     */
    public static <T> int search(List<T> list, T target) {

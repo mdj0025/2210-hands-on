@@ -110,6 +110,6 @@ A common error in using iterators arises from a misunderstanding of what the `ne
 
 1. Run `IteratorError.java` and observe its output.
 
-1. Identify and correct the erroneous use of the iterator.
+1. Identify and correct the errors in use of the iterator.
 
-1. It might help you identify the error if you use the provided jGRASP Canvas file (`IteratorError.jgrasp_canvas.xml`) in conjunction with the jGRASP debugger.
+1. It might help you identify the errors if you use the provided jGRASP Canvas file (`IteratorError.jgrasp_canvas.xml`) in conjunction with the jGRASP debugger.
