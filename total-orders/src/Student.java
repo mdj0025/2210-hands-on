@@ -5,18 +5,19 @@
  * and Comparator.
  *
  * @author   Dean Hendrix (dh@auburn.edu)
- * @version  2015-08-28
+ * @version  2017-09-06
  *
  */
 public class Student implements Comparable<Student> {
+
    private String fname;
    private String lname;
-   private int    section;
+   private int section;
 
    /** Creates a new student. */
-   public Student(String fn, String ln, int sec) {
-      fname   = fn;
-      lname   = ln;
+   public Student(String last, String first, int sec) {
+      lname = last;
+      fname = first;
       section = sec;
    }
 

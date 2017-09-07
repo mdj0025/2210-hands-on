@@ -1,6 +1,6 @@
 <!---
 	@author   Dean Hendrix (dh@auburn.edu)
-	@version  2016-08-25
+	@version  2017-09-07
 -->
 
 # Hands-On: Total Orders
@@ -56,6 +56,8 @@ The standard way to require that objects of a given class can be ordered is to h
       }
    ```
 
+1. Submit `Student.java` to Hands-On: Total Orders (Comparable) in Vocareum to document your progress.
+
 1. Open `ClassRoll.java` in jGRASP and compile it.
 
 1. Use `ClassRoll.java` to informally test your implementation of the natural order of Students. Note that you do not have to address the shuffling or `Comparator` aspect of the `ClassRoll` class yet. Just run the file as-is.
@@ -84,6 +86,8 @@ Java provides the `Comparator` interface as the standard way of defining a total
    ```
 
 1. Compile and run `ClassRoll.java` to informally test your solution.
+
+1. Submit both `Student.java` and `ClassRoll.java` to Hands-On: Total Orders (Comparator) in Vocareum to document your progress.
 
 1. Use the provided jGRASP Canvas file (`ClassRoll.jgrasp_canvas.xml`) to watch the sort by comparator happen as you single-step in debug mode.
 

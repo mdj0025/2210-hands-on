@@ -10,7 +10,7 @@ import java.util.List;
  * a list of Students.
  *
  * @author   Dean Hendrix (dh@auburn.edu)
- * @version  2016-08-25
+ * @version  2017-09-06
  *
  */
 public class ClassRoll {
@@ -19,15 +19,15 @@ public class ClassRoll {
    public static void main(String[] args) {
 
       List<Student> roll = Arrays.asList(
-         new Student("Don", "Knuth", 2),
-         new Student("Alan", "Turing", 2),
-         new Student("Tony", "Hoare", 2),
-         new Student("John", "von Neumann", 1),
-         new Student("Jimmy", "Dijkstra", 1),
-         new Student("Alonzo", "Church", 1),
-         new Student("John", "McCarthy", 2),
-         new Student("Alan", "Turing", 1),
-         new Student("Edsger", "Dijkstra", 2));
+         new Student("Knuth", "Don", 2),
+         new Student("Turing", "Alan", 2),
+         new Student("Hoare", "Tony", 2),
+         new Student("von Neumann", "John", 1),
+         new Student("Dijkstra", "Jimmy", 1),
+         new Student("Church", "Alonzo", 1),
+         new Student("McCarthy", "John", 2),
+         new Student("Turing", "Alan", 1),
+         new Student("Dijkstra", "Edsger", 2));
 
       System.out.println("Original Roll: ");
       roll.forEach(System.out::println);
@@ -73,7 +73,7 @@ public class ClassRoll {
     * zero if s1 and s2 have the same section, and a postive integer
     * if s1's section is greater than s2's section.
     */
-   private static class CompareStudentsBySection implements Comparator<Student> {
+   public static class CompareStudentsBySection implements Comparator<Student> {
       /** Compares s1 to s2 in with respect to the defined total order. */
       public int compare(Student s1, Student s2) {
          return s1.getSection() - s2.getSection();
