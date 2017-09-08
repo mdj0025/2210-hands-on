@@ -1,6 +1,7 @@
 /**
  * MinOfThree.java
- * Selects the minimum of three integer values.
+ * Selects the minimum of three integer values. The logic of min1
+ * has an error.
  *
  * @author   Dean Hendrix (dh@auburn.edu)
  * @version  2016-08-18
@@ -48,17 +49,23 @@ public class MinOfThree {
       if (a < b) {
          if (a < c) {
             return a;
-         }
-         else {
+         } 
+         else if (c < a) {
             return c;
+         } 
+         else {
+            return a;
          }
-      }
+      } 
       else {
          if (b < c) {
             return b;
-         }
-         else {
+         } 
+         else if (c < b) {
             return c;
+         } 
+         else {
+            return b;
          }
       }
    }
