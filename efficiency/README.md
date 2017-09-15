@@ -148,3 +148,7 @@ The `TimeComplexity` class demonstrates how you can generate data that will allo
 1. Run this program and observe its output.
 
 1. Interact with this code and make sure that you understand everything that it does and how you might apply it for your own purposes.
+
+1. To record your progress and check your ability to collect and analyze performance data, take the Canvas quiz associated with this activity.
+
+
