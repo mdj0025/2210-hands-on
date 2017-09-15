@@ -2,7 +2,7 @@
    Description of the Hands-On: Efficiency activity.
 
    @author     Dean Hendrix (dh@auburn.edu)
-   @version    2016-08-30
+   @version    2017-09-15
 -->
 
 # Hands-On: Efficiency

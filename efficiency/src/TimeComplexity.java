@@ -10,7 +10,7 @@
 public class TimeComplexity {
 
    // number of timing runs to make
-   private static final int NUM_RUNS = 10;
+   private static final int NUM_RUNS = 5;
 
    // 1.0E9 ns per second
    private static final double SECONDS = 1_000_000_000d;
@@ -20,14 +20,14 @@ public class TimeComplexity {
       long start;
       long elapsedTime;
       double avgTime = 0d;
-      int n = 8;
+      int n = 4;
       System.out.printf("%4s%8s\n", "N", "Time");
       for (int i = 0; i < NUM_RUNS; i++) {
          start = System.nanoTime();
          methodToTime(n);
          elapsedTime = System.nanoTime() - start;
          System.out.printf("%4d %8.3f\n", n, (elapsedTime / SECONDS));
-         n *= 2;
+         n = n * 2;
       }
    }
 
@@ -36,12 +36,16 @@ public class TimeComplexity {
    private static void methodToTime(int n) {
       for (int i = 0; i < n; i++) {
          for (int j = 0; j < n; j++) {
-            foo();
+            for (int k = 0; k < n; k++) {
+               foo();
+            }
          }
       }
       for (int i = 0; i < n; i++) {
          for (int j = 0; j < n; j++) {
-            foo();
+            for (int k = 0; k < n; k++) {
+               foo();
+            }
          }
       }
    }
