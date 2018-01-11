@@ -3,12 +3,12 @@
 	Introduces basic requirements and procedures for lab.
 
 	@author:  Dean Hendrix <dh@auburn.edu>
-	@version: 2017-05-18
+	@version: 2018-01-11
 -->
 
 # Hands-On: Getting Started
 
-You are asked to perform several activities that will help you prepare for the COMP 2210 assignments. Although this is part of your calculated course grade, you are strongly encouraged to complete each task. Be sure to ask your TA questions if you have trouble.
+You are asked to perform several activities that will help you prepare for the COMP 2210 assignments. Although this is not part of your calculated course grade, you are strongly encouraged to complete each task. Be sure to ask your TA questions if you have trouble.
 
 
 ## Canvas
@@ -17,7 +17,7 @@ Navigate within Canvas and familiarize yourself with the organization of the cou
 
 1. Read the official course syllabus.
 1. Register for and log in to Piazza.
-1. Familiarize yourself with the modules structure for the course.
+1. Familiarize yourself with the module structure for the course.
 1. Complete everything in *M0 - Welcome to the Course*.
 1. Make sure you can find all the course notes, both within the modules and under the Files link.
 1. Make sure your Canvas account Notification Preferences are what you want. At a minimum, you are required to have all course announcements sent to your TigerMail immediately.
@@ -59,7 +59,7 @@ Using the Engineering network drive to store your work is not required, but it i
 
 *Note: The Engineering lab machines have JUnit already installed and jGRASP will by default have this plugin configured. For your own machine, you will have to download and unzip JUnit first and then configure this plugin with the steps below.*
 1. Create the following directory: `COMP2210/tools/junit`.
-1. Download to the directory you just created the two jar files (`junit.jar` and `hamcrest-core.jar`) from the latest stable release of JUnit (4.12) available at the following URL.
+1. Download to the directory you just created the two jar files (`junit.jar` and `hamcrest-core.jar`) from the latest stable release of JUnit 4 (4.12) available at the following URL.
 	- [`https://github.com/junit-team/junit/wiki/Download-and-Install`](https://github.com/junit-team/junit/wiki/Download-and-Install)
 1. In jGRASP, use the *Tools* menu to configure the **JUnit plugin**.
 	- Select *Tools > JUnit > Configure*.
@@ -108,7 +108,7 @@ Note that the XML checks file that we're using is a slightly modified version of
 1. The submission report will be shown in the terminal pane at the bottom and it will be available under *Details* -> *View Submission Report*.
 	- The submission report is simply the output of compiling, running a checkstyle audit, and executing JUnit tests. It is exactly what you would see at the command line if you were doing this yourself.
 	- The submission report doesn't show a grade, but it does show you how many tests were run and how many of those passed.
-1. Grading is done with a different script and happens automatically upon submission. You should notice that a yellow-highlited *Graded* designation has appeared next to the `LatestSubmission` folder in the left pane.
+1. Grading is done with a different script and happens automatically upon submission. You should notice that a yellow-highlighted *Graded* designation has appeared next to the `LatestSubmission` folder in the left pane.
 	- You can see your grade by going back to the *Hands-On: Getting Started* page (just click on it at the top).
 	- Vocareum automatically sends your grade to Canvas, so you should also be able to check in Canvas to see your current grade for any assignment.
 1. From the main Vocareum page you can see grade statistics for all your assignments in a gradebook format.
@@ -116,7 +116,7 @@ Note that the XML checks file that we're using is a slightly modified version of
 
 ## Assignment workflow
 
-1. Open the `WarEagle.java` file in an editor window.
+1. Open the `WarEagle.java` file in a jGRASP editor window.
 1. Compile and run the file.
 1. Make a few changes in the file to embed some intentional errors, including coding style issues.
 1. Resubmit this file in Vocareum.
